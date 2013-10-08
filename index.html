@@ -61,7 +61,7 @@
       zoom: 12,
       //draggable: false,
       //scrollwheel: false,
-      disableDefaultUI: true, 
+      disableDefaultUI: true, //Comment this line to add controls to the display
       mapTypeId: google.maps.MapTypeId.ROADMAP
       });
 
@@ -83,13 +83,14 @@
 		  var legend = document.createElement('div');
 		  legend.id = 'legend';
 		  var content = [];
-		  content.push('<h5><b>Pandal Ratings</b></h5>');
-		  content.push('<span onclick="updateMap(layer,\'Rating=1\')">1 <img alt="large_red" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FF0000"></span>');
-		  content.push('<span onclick="updateMap(layer,\'Rating=2\')"> 2 <img alt="large_yellow" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FFFF00"></span>');
-		  content.push('<span onclick="updateMap(layer,\'Rating=3\')"> 3 <img alt="large_green" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|00FF00"></span>');
-		  content.push('<span onclick="updateMap(layer,\'Rating=4\')"> 4 <img alt="large_blue" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|6699FF"></span>');
-		  content.push('<span onclick="updateMap(layer,\'Rating=5\')"> 5 <img alt="large_purple" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|9933FF"></span>');
-		  content.push('<h5><b>Legend</b></h5>');		  		  
+		  //content.push('<h5><b>Pandal Ratings</b></h5>');
+		  //content.push('<span onclick="updateMap(layer,\'Rating=1\')">1 <img alt="large_red" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FF0000"></span>');
+		  //content.push('<span onclick="updateMap(layer,\'Rating=2\')"> 2 <img alt="large_yellow" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FFFF00"></span>');
+		  //content.push('<span onclick="updateMap(layer,\'Rating=3\')"> 3 <img alt="large_green" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|00FF00"></span>');
+		  //content.push('<span onclick="updateMap(layer,\'Rating=4\')"> 4 <img alt="large_blue" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|6699FF"></span>');
+		  //content.push('<span onclick="updateMap(layer,\'Rating=5\')"> 5 <img alt="large_purple" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|9933FF"></span>');
+		  content.push('<h5><b>Legend</b></h5>');
+		  content.push('<p onclick="updateMap(layer,\'Rating=4\')"><img alt="large_yellow" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FFFF00"> Pandals</p>');
 		  content.push('<p onclick="updateMap(layer,\'Rating=6\')"><img src="//storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0" alt="small red map dot" title="small red map dot" width="9" height="9"> Metro stations</p>');
 		  content.push('<p onclick="updateMap(layer,\'Rating=7\')"><img src="//storage.googleapis.com/support-kms-prod/SNP_2752068_en_v0" alt="small blue map dot" title="small blue map dot" width="9" height="9"> Bus stands</p>');
 		  content.push('<p onclick="updateMap(layer,\'Rating=8\')"><img src="//storage.googleapis.com/support-kms-prod/SNP_2752129_en_v0" alt="small green map dot" title="small green map dot" width="9" height="9"> Landmarks</p>');
