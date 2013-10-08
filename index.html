@@ -58,6 +58,14 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
     <script type="text/javascript">
+	(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
       function initialize() {
       google.maps.visualRefresh = true;
       var map = new google.maps.Map(document.getElementById('googft-mapCanvas'), {
@@ -115,6 +123,7 @@
 		  var fb = document.createElement('div');
 		  fb.id = 'fb';
 		  var content = [];
+		  content.push('<div id="fb-root"></div>');
 		  content.push('<div class="fb-like" data-href="http://thescholarsavenue.github.io/pujomap/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-send="false"></div>');
 		  fb.innerHTML = content.join("");
 		  fb.index = 1;
@@ -138,14 +147,6 @@
   </head>
 
   <body>
-  <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
     <div id="googft-mapCanvas"></div>
   </body>
 </html>
