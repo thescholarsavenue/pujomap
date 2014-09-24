@@ -81,9 +81,9 @@
       var map = new google.maps.Map(document.getElementById('googft-mapCanvas'), {
       center: new google.maps.LatLng(22.5551507024882, 88.39278582602536),
       zoom: 12,
-      <!--draggable: false,-->
-      <!--scrollwheel: false,-->
-      disableDefaultUI: true, <!--Comment this line to add controls to the display-->
+      //draggable: false,
+      //scrollwheel: false,
+      disableDefaultUI: true, //Comment this line to add controls to the display
       mapTypeId: google.maps.MapTypeId.ROADMAP
       });
 
@@ -101,18 +101,18 @@
 		  }
 		});
 		
-		  <!--Create the legend and display on the map-->
+		  //Create the legend and display on the map
 		  var legend = document.createElement('div');
 		  legend.id = 'legend';
 		  var content = [];
-		  <!--
+		  /*
 		  content.push('<h5><b>Pandal Ratings</b></h5>');
 		  content.push('<span onclick="updateMap(layer,\'Rating=1\')">1 <img alt="large_red" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FF0000"></span>');
 		  content.push('<span onclick="updateMap(layer,\'Rating=2\')"> 2 <img alt="large_yellow" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FFFF00"></span>');
 		  content.push('<span onclick="updateMap(layer,\'Rating=3\')"> 3 <img alt="large_green" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|00FF00"></span>');
 		  content.push('<span onclick="updateMap(layer,\'Rating=4\')"> 4 <img alt="large_blue" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|6699FF"></span>');
 		  content.push('<span onclick="updateMap(layer,\'Rating=5\')"> 5 <img alt="large_purple" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|9933FF"></span>');
-		  -->
+		  */
 		  content.push('<h5><b>Legend</b></h5>');
 		  content.push('<p onclick="updateMap(layer,\'Rating=4\')"><img alt="large_yellow" src="//chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld=|FFFF00"> Pandals</p>');
 		  content.push('<p onclick="updateMap(layer,\'Rating=6\')"><img src="//storage.googleapis.com/support-kms-prod/SNP_2752125_en_v0" alt="small red map dot" title="small red map dot" width="9" height="9"> Metro stations</p>');
@@ -128,7 +128,7 @@
 		  var content = [];
 		  content.push("<h4><b>Go Pandal-hopping this Durga Puja</b></h4>");
 		  content.push("<h5><em>A Visualization by The Scholars' Avenue</em></h5>");
-		  <!--content.push('<div class="fb-like" data-href="https://www.facebook.com/thescholarsavenue" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>');-->
+		  //content.push('<div class="fb-like" data-href="https://www.facebook.com/thescholarsavenue" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>');
 		  title.innerHTML = content.join("");
 		  title.index = 1;
 		  map.controls[google.maps.ControlPosition.LEFT_TOP].push(title);
@@ -136,10 +136,10 @@
 		  var fb = document.createElement('div');
 		  fb.id = 'fb';
 		  var content = [];
-		  content.push('<p>meh</p>');
-		  <!--content.push('<div id="fb-root"></div>');-->
-		  <!--content.push('<div class="fb-like" data-href="http://thescholarsavenue.github.io/pujomap/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-send="false"></div>');-->
-		  <!--content.push('<div class="fb-like" data-href="https://www.facebook.com/thescholarsavenue" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>');-->
+		  
+		  content.push('<div id="fb-root"></div>');-->
+		  //content.push('<div class="fb-like" data-href="http://thescholarsavenue.github.io/pujomap/" data-width="The pixel width of the plugin" data-height="The pixel height of the plugin" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-send="false"></div>');
+		  content.push('<div class="fb-like" data-href="https://www.facebook.com/thescholarsavenue" data-layout="button" data-action="like" data-show-faces="false" data-share="true"></div>');
 		  fb.innerHTML = content.join("");
 		  fb.index = 1;
 		  map.controls[google.maps.ControlPosition.RIGHT_TOP].push(fb);
